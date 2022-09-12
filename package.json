@@ -1,12 +1,12 @@
 {
   "dependencies": {
+    "ascii-art-table": "^1.0.1",
     "readline-sync": "^1.4.10"
   },
   "name": "clase-poo",
   "description": "Programación orientada a objetos",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
