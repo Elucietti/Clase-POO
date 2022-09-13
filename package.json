@@ -2,7 +2,8 @@
   "dependencies": {
     "ascii-art-table": "^1.0.1",
     "calc-simple-npm": "^1.4.2",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "yosay": "^2.0.2"
   },
   "name": "clase-poo",
   "description": "Programación orientada a objetos",
