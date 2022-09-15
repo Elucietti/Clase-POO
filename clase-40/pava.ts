@@ -1,8 +1,8 @@
 class Pava{
     //atributos o estados
     encendido:boolean;
-    calentando:number=0;
-    hirviendo:number=0;
+    calentando:number;
+    hirviendo:number;
 
    
 //funcionalidades
