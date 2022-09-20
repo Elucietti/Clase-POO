@@ -1,61 +1,91 @@
 //Crear la clase Rectangulo con las siguientes caracteristicas y su constructor: base, altura 
 //La funcionalidad de la clase debe ser:
 //
-//-     Calcular el area
-//-     Compararlo con otro rectangulo. Devolver 1 si es mayor, 0 son iguales y -1 si es menor.
-//-     Determinar si es un cuadrado(si base y altura son iguales).
-//-     Determinar si esta acostado o parado(si el alto es mas que el ancho).
+//-    * Calcular el area
+//-      Compararlo con otro rectangulo. Devolver 1 si es mayor, 0 son iguales y -1 si es menor.
+//-    * Determinar si es un cuadrado(si base y altura son iguales).
+//-    * Determinar si esta acostado o parado(si el alto es mas que el ancho).
 
-class rectangulo{
+class Rectangulo{
     private base:number;
     private altura:number;
-  
-
+    private Area:number;
+   
     constructor(pBase:number,pAltura:number,){
         this.base=pBase;
         this.altura=pAltura;
-       
     }
 
-    public setAreaBas(pBa:number){
+    public setBas(pBa:number){
        this.base=pBa;
        
     }
-
-    public setAreaAlt(pAl:number){
+    public nBas():number{
+        return this.base;
+    }
+    
+    public setAlt(pAl:number){
         this.altura=pAl;
     }
 
-    public nAreab():number{
-        return this.base;
-
-    }
-
-    public nAreaA():number{
+    public nAlt():number{
         return this.altura;
 
     }
-    
+
+    public calcularArea():number{
+        let resultado:number=this.base*this.altura;
+        return resultado;
+    }
+
+    public comparacionLados():string{
+        let cuadra:string = ' ';
+        if(this.base==this.altura){
+            cuadra="es un cuadrado";
+            
+        }else if(this.base>this.altura){
+            cuadra="es un rectangulo y esta acostado";
+        
+        }else{
+            cuadra="es un rectangulo y esta parado";
+        }
+        return cuadra;
+    }
+
+    public comparacionMoM(rectangulo1:number,rectangulo2:number){
+        let mOm:number=0;
+        if(this.calcularArea()==this.calcularArea()){
+            mOm=0;
+        }else if(this.calcularArea()<this.calcularArea()){
+            mOm=-1;
+        }else if(this.calcularArea()>this.calcularArea()){
+            mOm=1;
+        }
+        return mOm;  
+    }
 }
 
-let rectangulo1=new rectangulo(10,6);
-let rectangulo2=new rectangulo(8,5);
+let rectangulo1=new Rectangulo(10,6);
+let rectangulo2=new Rectangulo(7,12);
 
-rectangulo1.setAreaBas(10);
-let datoRec1:number=rectangulo1.nAreab();
-rectangulo1.setAreaAlt(6);
-let datoRec2:number=rectangulo1.nAreaA();
+let dato1:number=rectangulo1.nBas();
+let dato2:number=rectangulo1.nAlt();
+let area1:number=rectangulo1.calcularArea();
+let cuadrado1:string=rectangulo1.comparacionLados();
 
-rectangulo2.setAreaBas(7);
-let datRec1:number=rectangulo2.nAreab();
-rectangulo2.setAreaAlt(12);
-let datRec2:number=rectangulo2.nAreaA();
+let dato3:number=rectangulo2.nBas();
+let dato4:number=rectangulo2.nAlt();
+let area2:number=rectangulo2.calcularArea();
+let cuadrado2:string=rectangulo2.comparacionLados();
 
-let area1:number=datoRec1*datoRec2;
-let area2:number=datRec1*datRec2;
+let comparacion:number=rectangulo1.comparacionMoM(area1,area2);
 
-console.log("Rectangulo N°1---- base: " + datoRec1 + " altura: " + datoRec2 );
-console.log("area rectangulo N°1: "+ area1);
+console.log("Rectangulo N°1---- base: " + dato1+ "cm"+ " altura: " + dato2+"cm" );
+console.log("area rectangulo N°1: "+ area1+"cm2");
+console.log("rectangulo N°1: " + cuadrado1);
 
-console.log("Rectangulo N°2-----base: " + datRec1 + " altura: " + datRec2);
-console.log("area rectangulo N°: "+ area2);
+console.log("Rectangulo N°2---- base: " + dato3+"cm" + " altura: " + dato4+"cm" );
+console.log("area rectangulo N°2: "+ area2+"cm2");
+console.log("rectangulo N°2: " + cuadrado2);
+
+console.log("resultado si es 1 rec1 es mayor, 0 es igual y -1 es menor: " + comparacion );

@@ -1,42 +1,74 @@
 //Crear la clase Rectangulo con las siguientes caracteristicas y su constructor: base, altura 
 //La funcionalidad de la clase debe ser:
 //
-//-     Calcular el area
-//-     Compararlo con otro rectangulo. Devolver 1 si es mayor, 0 son iguales y -1 si es menor.
-//-     Determinar si es un cuadrado(si base y altura son iguales).
-//-     Determinar si esta acostado o parado(si el alto es mas que el ancho).
-var rectangulo = /** @class */ (function () {
-    function rectangulo(pBase, pAltura) {
+//-    * Calcular el area
+//-      Compararlo con otro rectangulo. Devolver 1 si es mayor, 0 son iguales y -1 si es menor.
+//-    * Determinar si es un cuadrado(si base y altura son iguales).
+//-    * Determinar si esta acostado o parado(si el alto es mas que el ancho).
+var Rectangulo = /** @class */ (function () {
+    function Rectangulo(pBase, pAltura) {
         this.base = pBase;
         this.altura = pAltura;
     }
-    rectangulo.prototype.setAreaBas = function (pBa) {
+    Rectangulo.prototype.setBas = function (pBa) {
         this.base = pBa;
     };
-    rectangulo.prototype.setAreaAlt = function (pAl) {
-        this.altura = pAl;
-    };
-    rectangulo.prototype.nAreab = function () {
+    Rectangulo.prototype.nBas = function () {
         return this.base;
     };
-    rectangulo.prototype.nAreaA = function () {
+    Rectangulo.prototype.setAlt = function (pAl) {
+        this.altura = pAl;
+    };
+    Rectangulo.prototype.nAlt = function () {
         return this.altura;
     };
-    return rectangulo;
+    Rectangulo.prototype.calcularArea = function () {
+        var resultado = this.base * this.altura;
+        return resultado;
+    };
+    Rectangulo.prototype.comparacionLados = function () {
+        var cuadra = ' ';
+        if (this.base == this.altura) {
+            cuadra = "es un cuadrado";
+        }
+        else if (this.base > this.altura) {
+            cuadra = "es un rectangulo y esta acostado";
+        }
+        else {
+            cuadra = "es un rectangulo y esta parado";
+        }
+        return cuadra;
+    };
+    Rectangulo.prototype.comparacionMoM = function (rectangulo1, rectangulo2) {
+        var mOm = 0;
+        if (this.calcularArea() == this.calcularArea()) {
+            mOm = 0;
+        }
+        else if (this.calcularArea() < this.calcularArea()) {
+            mOm = -1;
+        }
+        else if (this.calcularArea() > this.calcularArea()) {
+            mOm = 1;
+        }
+        return mOm;
+    };
+    return Rectangulo;
 }());
-var rectangulo1 = new rectangulo(10, 6);
-var rectangulo2 = new rectangulo(8, 5);
-rectangulo1.setAreaBas(10);
-var datoRec1 = rectangulo1.nAreab();
-rectangulo1.setAreaAlt(6);
-var datoRec2 = rectangulo1.nAreaA();
-rectangulo2.setAreaBas(7);
-var datRec1 = rectangulo2.nAreab();
-rectangulo2.setAreaAlt(12);
-var datRec2 = rectangulo2.nAreaA();
-var area1 = datoRec1 * datoRec2;
-var area2 = datRec1 * datRec2;
-console.log("Rectangulo N°1---- base: " + datoRec1 + " altura: " + datoRec2);
-console.log("area rectangulo N°1: " + area1);
-console.log("Rectangulo N°2-----base: " + datRec1 + " altura: " + datRec2);
-console.log("area rectangulo N°: " + area2);
+var rectangulo1 = new Rectangulo(10, 6);
+var rectangulo2 = new Rectangulo(7, 12);
+var dato1 = rectangulo1.nBas();
+var dato2 = rectangulo1.nAlt();
+var area1 = rectangulo1.calcularArea();
+var cuadrado1 = rectangulo1.comparacionLados();
+var dato3 = rectangulo2.nBas();
+var dato4 = rectangulo2.nAlt();
+var area2 = rectangulo2.calcularArea();
+var cuadrado2 = rectangulo2.comparacionLados();
+var comparacion = rectangulo1.comparacionMoM(area1, area2);
+console.log("Rectangulo N°1---- base: " + dato1 + "cm" + " altura: " + dato2 + "cm");
+console.log("area rectangulo N°1: " + area1 + "cm2");
+console.log("rectangulo N°1: " + cuadrado1);
+console.log("Rectangulo N°2---- base: " + dato3 + "cm" + " altura: " + dato4 + "cm");
+console.log("area rectangulo N°2: " + area2 + "cm2");
+console.log("rectangulo N°2: " + cuadrado2);
+console.log("resultado si es 1 rec1 es mayor, 0 es igual y -1 es menor: " + comparacion);
