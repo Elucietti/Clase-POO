@@ -1,11 +1,3 @@
-//Crear la clase Rectangulo con las siguientes caracteristicas y su constructor: base, altura 
-//La funcionalidad de la clase debe ser:
-//
-//-    * Calcular el area
-//-      Compararlo con otro rectangulo. Devolver 1 si es mayor, 0 son iguales y -1 si es menor.
-//-    * Determinar si es un cuadrado(si base y altura son iguales).
-//-    * Determinar si esta acostado o parado(si el alto es mas que el ancho).
-
 class Rectangulo{
     private base:number;
     private altura:number;
