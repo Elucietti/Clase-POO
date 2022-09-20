@@ -9,7 +9,7 @@
 class Rectangulo{
     private base:number;
     private altura:number;
-    private Area:number;
+  
    
     constructor(pBase:number,pAltura:number,){
         this.base=pBase;
@@ -52,13 +52,13 @@ class Rectangulo{
         return cuadra;
     }
 
-    public comparacionMoM(rectangulo1:number,rectangulo2:number){
+    public comparacionMoM(){
         let mOm:number=0;
-        if(this.calcularArea()==this.calcularArea()){
+        if(rectangulo1.calcularArea()==rectangulo2.calcularArea()){
             mOm=0;
-        }else if(this.calcularArea()<this.calcularArea()){
+        }else if(rectangulo1.calcularArea()<rectangulo2.calcularArea()){
             mOm=-1;
-        }else if(this.calcularArea()>this.calcularArea()){
+        }else if(rectangulo1.calcularArea()>rectangulo2.calcularArea()){
             mOm=1;
         }
         return mOm;  
@@ -78,7 +78,7 @@ let dato4:number=rectangulo2.nAlt();
 let area2:number=rectangulo2.calcularArea();
 let cuadrado2:string=rectangulo2.comparacionLados();
 
-let comparacion:number=rectangulo1.comparacionMoM(area1,area2);
+let comparacion:number=rectangulo1.comparacionMoM();
 
 console.log("Rectangulo N°1---- base: " + dato1+ "cm"+ " altura: " + dato2+"cm" );
 console.log("area rectangulo N°1: "+ area1+"cm2");

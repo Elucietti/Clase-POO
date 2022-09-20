@@ -39,15 +39,15 @@ var Rectangulo = /** @class */ (function () {
         }
         return cuadra;
     };
-    Rectangulo.prototype.comparacionMoM = function (rectangulo1, rectangulo2) {
+    Rectangulo.prototype.comparacionMoM = function () {
         var mOm = 0;
-        if (this.calcularArea() == this.calcularArea()) {
+        if (rectangulo1.calcularArea() == rectangulo2.calcularArea()) {
             mOm = 0;
         }
-        else if (this.calcularArea() < this.calcularArea()) {
+        else if (rectangulo1.calcularArea() < rectangulo2.calcularArea()) {
             mOm = -1;
         }
-        else if (this.calcularArea() > this.calcularArea()) {
+        else if (rectangulo1.calcularArea() > rectangulo2.calcularArea()) {
             mOm = 1;
         }
         return mOm;
@@ -64,7 +64,7 @@ var dato3 = rectangulo2.nBas();
 var dato4 = rectangulo2.nAlt();
 var area2 = rectangulo2.calcularArea();
 var cuadrado2 = rectangulo2.comparacionLados();
-var comparacion = rectangulo1.comparacionMoM(area1, area2);
+var comparacion = rectangulo1.comparacionMoM();
 console.log("Rectangulo N°1---- base: " + dato1 + "cm" + " altura: " + dato2 + "cm");
 console.log("area rectangulo N°1: " + area1 + "cm2");
 console.log("rectangulo N°1: " + cuadrado1);
