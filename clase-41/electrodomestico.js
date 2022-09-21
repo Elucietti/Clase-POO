@@ -89,10 +89,3 @@ console.log("centrifugado: " + tiempoCentri + " minutos");
 console.log("equipo de bajo consumo: " + efi);
 console.log("balance: " + balan);
 console.log("tipo de equipo: " + gam);
-/*
-La funcionalidad de la clase debe ser:
--Todos los metodos get y set
--Comprobar si el electrodomestico es de bajo consumo (valor booleano)
--Calcular el balance (costo dividido peso)
--Indicar si es un producto de alta gama(balance mayor que 3)
-*/ 
