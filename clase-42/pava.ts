@@ -1,21 +1,20 @@
 import { BlobOptions } from "buffer";
 
 class Pava{
-    
     private encendido:boolean;
     private calentando:number;
+    private calenTexto:string;
 
 
-   constructor(PEncendido:boolean, pCalentando:number,){
+   constructor(PEncendido:boolean, pCalentando:number,pCalenTexto:string){
         this.encendido=PEncendido;
         this.calentando=pCalentando;
-        
+        this.calenTexto=pCalenTexto;
    }
 
     public getEncendido():boolean{
         return this.encendido;
     }
-
     public setEncendido(estado:boolean){
         let resultado:boolean;
         if(this.encendido==true){
@@ -37,14 +36,24 @@ class Pava{
         }
         return resultado;
     }
-
-        
-
+    public getTexto():string{
+        return this.calenTexto;
+    }
+    public setTexto():string{
+        let pTexto:string;
+        if(this.calentando<75){
+            pTexto='El agua esta para el mate';
+        }else{
+            pTexto='El agua esta hervida';
+        }
+        return pTexto;
+    }
 
 }
 
-let pava = new Pava(true,73);
+let pava = new Pava(true,73,"mate");
 
-console.log("estado de la pava:  " + pava.setEncendido);
-
+console.log("Encendido:  " + pava.getEncendido());
+console.log("Temperatura del agua: "+pava.getCalentando()+" °")
+console.log(pava.setTexto());
 
