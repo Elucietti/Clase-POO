@@ -22,16 +22,6 @@ var Pava = /** @class */ (function () {
     Pava.prototype.getCalentando = function () {
         return this.calentando;
     };
-    Pava.prototype.setCalentando = function (mate) {
-        var resultado = 0;
-        if (this.calentando < 75) {
-            resultado = this.calentando;
-        }
-        else {
-            resultado = this.calentando;
-        }
-        return resultado;
-    };
     Pava.prototype.getTexto = function () {
         return this.calenTexto;
     };

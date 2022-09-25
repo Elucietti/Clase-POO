@@ -27,15 +27,8 @@ class Pava{
     public getCalentando():number{
         return this.calentando;
     }
-    public setCalentando(mate:number){
-        let resultado:number=0;
-        if(this.calentando<75){
-            resultado=this.calentando;
-        }else{
-            resultado=this.calentando;
-        }
-        return resultado;
-    }
+  
+    
     public getTexto():string{
         return this.calenTexto;
     }
