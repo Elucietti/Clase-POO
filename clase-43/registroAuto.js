@@ -27,13 +27,17 @@ var RegistroAutomotor = /** @class */ (function () {
         this.listadoDeAutos[posicion].setPatente(pPat);
         this.listadoDeAutos[posicion].setMarca(pMar);
     };
+    RegistroAutomotor.prototype.editarTitular = function (posicion, pTitu) {
+        this.listadoDeAutos[posicion].setTitular(pTitu);
+    };
     return RegistroAutomotor;
 }());
 var Auto = /** @class */ (function () {
-    function Auto(paraMarca, paraModelo, paraPatente) {
+    function Auto(paraMarca, paraModelo, paraPatente, paraTitular) {
         this.marca = paraMarca;
         this.modelo = paraModelo;
         this.patente = paraPatente;
+        this.titular = paraTitular;
     }
     Auto.prototype.getMarca = function () {
         return this.marca;
@@ -53,18 +57,26 @@ var Auto = /** @class */ (function () {
     Auto.prototype.setPatente = function (pPatente) {
         this.patente = pPatente;
     };
+    Auto.prototype.getTitular = function () {
+        return this.titular;
+    };
+    Auto.prototype.setTitular = function (paraTitulo) {
+        this.titular = paraTitulo;
+    };
     return Auto;
 }());
-var auto1 = new Auto("ford", "focus", "AAA123");
-var auto2 = new Auto("toyota", "corolla", "BBB123");
-var auto3 = new Auto("vw", "gol", "CCC123");
+var auto1 = new Auto("ford", "focus", "AAA123", "Emanuel");
+var auto2 = new Auto("toyota", "corolla", "BBB123", "Santino");
+var auto3 = new Auto("vw", "gol", "CCC123", "Ignacio");
 var arregloDeAutos = [auto1, auto2, auto3];
 var registroTDF = new RegistroAutomotor(arregloDeAutos);
-var auto4 = new Auto("toyota", "hilux", "SSS123");
+var auto4 = new Auto("toyota", "hilux", "SSS123", "agustina");
 var respuestaRecibida = registroTDF.consultarVehiculo(auto4);
 console.log(respuestaRecibida);
 registroTDF.registrarVehiculo(auto4);
 var respuestaRecibida2 = registroTDF.consultarVehiculo(auto4);
 console.log(respuestaRecibida2);
 console.log(arregloDeAutos.length);
-console.log(arregloDeAutos);
+console.log(auto3);
+registroTDF.editarTitular(2, "frida");
+console.log(auto3);
