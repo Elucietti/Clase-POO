@@ -1,4 +1,4 @@
-class Punto{
+export class Punto{
     private x:number;
     private y:number;
 
@@ -28,5 +28,3 @@ class Punto{
     }
 }
 
-let punto=new Punto(2,5)
-console.log(punto.toString());
