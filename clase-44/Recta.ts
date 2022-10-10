@@ -1,6 +1,6 @@
 import {Punto} from './Punto';
 
-class Recta{
+export class Recta{
     private puntoInicial:Punto;
     private puntoFinal:Punto;
 
@@ -42,5 +42,8 @@ class Recta{
 
     sentido():string{
         return "algun lado";
+    }
+    toString():string{
+        return this.puntoInicial.toString()+','+this.get_puntoFinal.toString();
     }
 }

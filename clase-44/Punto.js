@@ -1,3 +1,6 @@
+"use strict";
+exports.__esModule = true;
+exports.Punto = void 0;
 var Punto = /** @class */ (function () {
     function Punto(x, y) {
         this.x = x;
@@ -20,5 +23,4 @@ var Punto = /** @class */ (function () {
     };
     return Punto;
 }());
-var punto = new Punto(2, 5);
-console.log(punto.toString());
+exports.Punto = Punto;
