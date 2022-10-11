@@ -2,13 +2,13 @@
 export class Libro{
     private nombre:string;
     private autor:string;
-    private editorial:string;
+    private genero:string;
 
-    constructor(pNombre:string,pAutor:string,pEditorial:string){
+    constructor(pNombre:string,pAutor:string,pGenero:string){
 
         this.nombre=pNombre;
         this.autor=pAutor;
-        this.editorial=pEditorial;
+        this.genero=pGenero;
     }
 
     getNombre():string{
@@ -27,11 +27,15 @@ export class Libro{
         this.autor=autor;
     }
 
-    getEditorial():string{
-        return this.editorial;
+    getGenero():string{
+        return this.genero;
     }
 
-    setEditorial(editorial:string){
-        this.editorial=editorial;
+    setGenero(genero:string){
+        this.genero=genero;
+    }
+
+    toString():string{
+        return 'Nombre del libro: '+this.nombre+' Autor: '+this.autor+' Genero literario: '+this.genero
     }
 }

@@ -19,14 +19,14 @@ export class GestorDeLibros{
     return respuesta;
   }
 
-  registrarLibro(pAuto:Auto):void{
+  registrarLibro(pAuto:Libro):void{
     this.listadoDeLibros.push(pAuto);
   }
 
-  eliminarLibro(pAuto:Auto):void{
+  eliminarLibro(pAuto:Libro):void{
     for(let i:number=0;i<this.listadoDeLibros.length;i++){
         if(this.listadoDeLibros[i].getNombre()===pAuto.getNombre()){
-            this.listadoDeLibros.splice(i,1);
+            this.listadoDeLibros.splice(i,1); 
         }
     }
   }
