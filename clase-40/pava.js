@@ -1,8 +1,6 @@
 var Pava = /** @class */ (function () {
     //funcionalidades
     function Pava(encendido, calentando, hirviendo) {
-        this.calentando = 0;
-        this.hirviendo = 0;
         this.encendido = true;
         this.calentando = calentando;
         this.hirviendo = hirviendo;
