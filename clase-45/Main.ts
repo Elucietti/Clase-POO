@@ -17,10 +17,7 @@ let tecnico2:EquipoTecnico=new EquipoTecnico("director tecnico");
 let tecnico3:EquipoTecnico=new EquipoTecnico("asistente tecnico");
 let arregloTecnicos:EquipoTecnico[]=[tecnico1,tecnico2,tecnico3];
 
-//console.log(arregloEquipo);
 
-//let seleccion:SelecciondeFutbol=new SelecciondeFutbol("Argentina",arregloEquipo,arregloTecnicos,arregloMedicos);
-//console.log(seleccion);
 
 jugador1.setNombre("emanuel");
 jugador1.setApellido("lucietti");
