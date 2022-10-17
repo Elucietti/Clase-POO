@@ -2,11 +2,11 @@
 exports.__esModule = true;
 exports.Persona = void 0;
 var Persona = /** @class */ (function () {
-    function Persona(parametroNombre, parametroApellido, parametroPasaporte, parametroFecha) {
-        this.nombre = parametroNombre;
-        this.apellido = parametroApellido;
-        this.nPasaporte = parametroPasaporte;
-        this.fechaDeNacimiento = parametroFecha;
+    function Persona() {
+        this.nombre; //=parametroNombre;
+        this.apellido; //=parametroApellido;
+        this.nPasaporte; //=parametroPasaporte;
+        this.fechaDeNacimiento; //=parametroFecha;
     }
     Persona.prototype.getNombre = function () {
         return this.nombre;

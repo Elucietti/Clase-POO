@@ -1,7 +1,10 @@
- export class EquipoMedico{
+import { Persona } from "./Persona";
+
+ export class EquipoMedico extends Persona{
     private medico:string;
 
-    constructor(paraMedico:string){
+    public constructor(paraMedico:string){
+        super();
         this.medico=paraMedico;
     }
 

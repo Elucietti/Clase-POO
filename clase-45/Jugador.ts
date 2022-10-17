@@ -1,9 +1,11 @@
+import { Persona } from "./Persona";
 
-export class Jugador{
+export class Jugador extends Persona{
     private nCamisaeta:number;
     private estado:string;
 
-    constructor(paraCamiseta:number, paraEstado:string){
+    public constructor(paraCamiseta:number, paraEstado:string){
+        super();
         this.nCamisaeta=paraCamiseta;
         this.estado=paraEstado;
     }

@@ -1,7 +1,10 @@
-export class EquipoTecnico{
+import { Persona } from "./Persona";
+
+export class EquipoTecnico extends Persona{
     private tecnico:string;
 
-    constructor(paraTecnico:string){
+    public constructor(paraTecnico:string){
+        super();
         this.tecnico=paraTecnico;
     }
 

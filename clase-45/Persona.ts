@@ -1,18 +1,16 @@
-import { EquipoMedico } from "./EquipoMedico";
-import { EquipoTecnico } from "./EquipoTecnico";
-import { Jugador } from "./Jugador";
+
 
 export class Persona{
    protected nombre:string;
    protected apellido:String;
    protected nPasaporte:number;
-   protected fechaDeNacimiento:number;
+   protected fechaDeNacimiento:string;
 
-    constructor(parametroNombre:string,parametroApellido:string,parametroPasaporte:number,parametroFecha:number){
-        this.nombre=parametroNombre;
-        this.apellido=parametroApellido;
-        this.nPasaporte=parametroPasaporte;
-        this.fechaDeNacimiento=parametroFecha;
+    public constructor(){
+        this.nombre;//=parametroNombre;
+        this.apellido;//=parametroApellido;
+        this.nPasaporte;//=parametroPasaporte;
+        this.fechaDeNacimiento;//=parametroFecha;
     }
 
     public getNombre():string{
@@ -37,10 +35,10 @@ export class Persona{
     public setPasaporte(pPasaporte:number):void{
         this.nPasaporte=pPasaporte;
     }
-    public getFecha():number{
+    public getFecha():string{
         return this.fechaDeNacimiento;
     }
-    public setFecha(pfecha:number):void{
+    public setFecha(pfecha:string):void{
         this.fechaDeNacimiento=pfecha;
     }
 
