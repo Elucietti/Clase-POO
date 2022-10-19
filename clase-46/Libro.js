@@ -20,7 +20,7 @@ var Libro = /** @class */ (function () {
         return "";
     };
     Libro.prototype.toString = function () {
-        return 'titulo: ' + this.titulo + ' autor: ' + this.autor + ' genero: ' + this.genero;
+        return 'Titulo: ' + this.titulo + '- Autor: ' + this.autor + '- Genero: ' + this.genero;
     };
     return Libro;
 }());

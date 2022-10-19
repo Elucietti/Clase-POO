@@ -22,6 +22,6 @@ export class Libro{
         return "";    
     }
     toString():string{
-        return 'titulo: '+this.titulo+' autor: '+this.autor+' genero: '+this.genero;
+        return 'Titulo: '+this.titulo+'- Autor: '+this.autor+'- Genero: '+this.genero;
     }
 }
