@@ -1,3 +1,5 @@
+import { runInThisContext } from "vm";
+
 export class Libro{
    private titulo:string;
    private autor:string;
@@ -20,6 +22,10 @@ export class Libro{
         if(this.genero!=undefined)
             return this.genero;
         return "";    
+    }
+
+    setNombre(titulo:string){
+        this.titulo=titulo;
     }
     toString():string{
         return 'Titulo: '+this.titulo+'- Autor: '+this.autor+'- Genero: '+this.genero;

@@ -15,3 +15,4 @@ bibloteca.insertarLibro(libro_3);
 bibloteca.insertarLibro(libro_4);
 bibloteca.insertarLibro(libro_5);
 console.log(bibloteca.toString());
+var arreglo = bibloteca.getLibros();

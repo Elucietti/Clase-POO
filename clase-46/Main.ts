@@ -17,3 +17,5 @@ bibloteca.insertarLibro(libro_4);
 bibloteca.insertarLibro(libro_5);
 
 console.log(bibloteca.toString());
+
+let arreglo:Array<Libro>=bibloteca.getLibros();

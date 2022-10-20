@@ -19,6 +19,9 @@ var Libro = /** @class */ (function () {
             return this.genero;
         return "";
     };
+    Libro.prototype.setNombre = function (titulo) {
+        this.titulo = titulo;
+    };
     Libro.prototype.toString = function () {
         return 'Titulo: ' + this.titulo + '- Autor: ' + this.autor + '- Genero: ' + this.genero;
     };
