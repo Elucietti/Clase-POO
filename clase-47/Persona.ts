@@ -1,10 +1,12 @@
+import { Cuenta } from "./Cuenta";
+
 export class Persona{
     protected nombre:string;
     protected apellido:string;
     protected Dni:number;
 
 
-comstructor(paraNombre:string,paraApellido:string,paraDni:number){
+constructor(paraNombre:string,paraApellido:string,paraDni:number){
     this.nombre=paraNombre;
     this.apellido=paraApellido;
     this.Dni=paraDni;

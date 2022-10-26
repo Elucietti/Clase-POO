@@ -1,5 +1,5 @@
 
 interface Cuentas{
-    interes():number;
-    SaldoMin():number;    
+    getInteres():number;
+    getSaldoMin():number;    
 }
